@@ -13,7 +13,6 @@ title: Support
   </div>
 
   <div class="site-hero-note">
-    <span>Updated 4 July 2026</span>
     <p>Start with the area that feels stuck. Most setup and sync issues are a quick settings check.</p>
   </div>
 </section>

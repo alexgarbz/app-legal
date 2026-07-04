@@ -30,6 +30,8 @@ html {
 }
 
 body {
+  margin: 0;
+  min-height: 100vh;
   background:
     radial-gradient(circle at 12% 8%, rgba(20, 135, 255, 0.07), transparent 30%),
     radial-gradient(circle at 88% 18%, rgba(196, 59, 217, 0.07), transparent 30%),
@@ -38,6 +40,10 @@ body {
   color: var(--upkeep-ink);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(82, 66, 224, 0.16);
 }
 
 .global-floating-header {
@@ -292,7 +298,7 @@ main.page-content > .wrapper,
 .site-eyebrow {
   margin: 0 0 14px;
   color: var(--accent);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 800;
   letter-spacing: 0;
 }
@@ -544,33 +550,34 @@ main.page-content > .wrapper,
   }
 
   .global-floating-nav {
-    min-height: 62px;
+    min-height: 50px;
     justify-content: space-between;
-    border-radius: 28px;
+    padding: 7px 9px;
+    border-radius: 999px;
     align-items: center;
   }
 
   .global-brand {
     position: static;
-    gap: 10px;
+    gap: 9px;
     transform: none;
   }
 
   .global-brand img {
-    width: 38px;
-    height: 38px;
-    border-radius: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
   }
 
   .global-brand span {
     display: inline;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 780;
   }
 
   .global-nav-links {
     position: absolute;
-    top: 68px;
+    top: 58px;
     right: 0;
     width: min(270px, calc(100vw - 34px));
     display: grid !important;
@@ -593,8 +600,8 @@ main.page-content > .wrapper,
     position: relative;
     z-index: 2;
     margin-left: auto;
-    width: 42px !important;
-    height: 42px !important;
+    width: 36px !important;
+    height: 36px !important;
     display: inline-flex !important;
     flex-direction: column;
     align-items: center;
@@ -669,9 +676,10 @@ main.page-content > .wrapper,
 
   .site-header .wrapper.custom-header-wrapper {
     width: calc(100% - 20px);
-    min-height: 62px;
+    min-height: 50px;
     margin-top: 0;
-    border-radius: 28px;
+    padding: 7px 9px;
+    border-radius: 999px;
     justify-content: space-between;
   }
 
@@ -682,9 +690,9 @@ main.page-content > .wrapper,
   }
 
   .site-logo {
-    width: 38px;
-    height: 38px;
-    border-radius: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
   }
 
   .site-nav .trigger {
@@ -711,8 +719,8 @@ main.page-content > .wrapper,
   .site-nav .menu-icon {
     position: relative;
     z-index: 2;
-    width: 42px !important;
-    height: 42px !important;
+    width: 36px !important;
+    height: 36px !important;
     display: inline-flex !important;
     flex-direction: column;
     align-items: center;
@@ -859,7 +867,28 @@ main.page-content > .wrapper,
     --upkeep-card: rgba(28, 33, 48, 0.66);
     --upkeep-card-line: rgba(255, 255, 255, 0.08);
     --upkeep-card-shadow: 0 16px 44px rgba(0, 0, 0, 0.40);
+    /* Accents brighten on dark so tinted text stays readable. */
+    --upkeep-blue: #57aaff;
+    --upkeep-indigo: #948bff;
+    --upkeep-purple: #df6bf0;
+    --upkeep-orange: #ffa14f;
+    --upkeep-green: #4cd964;
     --upkeep-bg: #0d0f16;
+  }
+
+  .privacy-accent {
+    --accent-soft: rgba(148, 139, 255, 0.16);
+    --accent-glow: rgba(148, 139, 255, 0.22);
+  }
+
+  .support-accent {
+    --accent-soft: rgba(87, 170, 255, 0.16);
+    --accent-glow: rgba(87, 170, 255, 0.22);
+  }
+
+  .emergency-accent {
+    --accent-soft: rgba(255, 161, 79, 0.18);
+    --accent-glow: rgba(255, 161, 79, 0.22);
   }
 
   body {

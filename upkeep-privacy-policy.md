@@ -14,7 +14,6 @@ title: Privacy Policy
   </div>
 
   <div class="site-hero-note">
-    <span>Effective 4 July 2026</span>
     <p>No advertising profile. No selling your data. Sync and shared homes use Apple iCloud services.</p>
   </div>
 </section>

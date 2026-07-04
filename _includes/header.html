@@ -1,6 +1,6 @@
 <header class="global-floating-header" role="banner">
   <nav class="global-floating-nav" aria-label="Main navigation">
-    <a class="global-brand" rel="author" href="{{ "/upkeep" | relative_url }}">
+    <a class="global-brand" rel="author" href="{{ "/" | relative_url }}">
       <img src="{{ site.logo | relative_url }}" alt="Upkeep app icon" width="40" height="40">
       <span>{{ site.title | escape }}</span>
     </a>
@@ -14,10 +14,27 @@
     </label>
 
     <div class="global-nav-links">
-      <a href="{{ "/upkeep" | relative_url }}">Home</a>
+      <a href="{{ "/" | relative_url }}">Home</a>
       <a href="{{ "/upkeep-privacy-policy" | relative_url }}">Privacy</a>
       <a href="{{ "/upkeep-support" | relative_url }}">Support</a>
+      <a href="#" data-feedback>Send Feedback</a>
       <a class="global-nav-cta" href="https://apps.apple.com/au/app/upkeep/id6777450786">Download</a>
     </div>
   </nav>
 </header>
+
+<script>
+  // Feedback links compose an email without the address appearing anywhere in
+  // the page source as a complete string (deters address scrapers).
+  (function () {
+    var u = ['alexj', 'garbin'].join('');
+    var d = ['gmail', 'com'].join('.');
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('[data-feedback]');
+      if (!link) return;
+      e.preventDefault();
+      window.location.href = 'mailto:' + u + '@' + d +
+        '?subject=' + encodeURIComponent('Upkeep feedback');
+    });
+  })();
+</script>
