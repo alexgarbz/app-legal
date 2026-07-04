@@ -51,10 +51,12 @@ body {
   justify-content: space-between;
   gap: 16px;
   padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.82);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.66);
-  box-shadow: 0 18px 60px rgba(35, 39, 48, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  background:
+    linear-gradient(135deg, rgba(20, 135, 255, 0.08), rgba(81, 71, 243, 0.06) 52%, rgba(196, 59, 217, 0.08)),
+    rgba(255, 255, 255, 0.70);
+  box-shadow: 0 18px 60px rgba(35, 39, 48, 0.12), 0 0 46px rgba(81, 71, 243, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(26px) saturate(180%);
   -webkit-backdrop-filter: blur(26px) saturate(180%);
 }
@@ -103,11 +105,16 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 18px;
+  padding: 11px 20px;
   border-radius: 999px;
   color: white !important;
   background: linear-gradient(135deg, var(--upkeep-blue), var(--upkeep-indigo) 60%, var(--upkeep-purple)) !important;
-  box-shadow: 0 12px 28px rgba(81, 71, 243, 0.24);
+  box-shadow: 0 12px 28px rgba(81, 71, 243, 0.30);
+}
+
+.global-nav-links .global-nav-cta:hover {
+  color: white !important;
+  background: linear-gradient(135deg, #2692ff, var(--upkeep-indigo) 58%, #d045e8) !important;
 }
 
 .global-nav-trigger,
@@ -135,10 +142,12 @@ body {
   gap: 16px;
   margin: 0 auto;
   padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.82);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.66);
-  box-shadow: 0 18px 60px rgba(35, 39, 48, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  background:
+    linear-gradient(135deg, rgba(20, 135, 255, 0.08), rgba(81, 71, 243, 0.06) 52%, rgba(196, 59, 217, 0.08)),
+    rgba(255, 255, 255, 0.70);
+  box-shadow: 0 18px 60px rgba(35, 39, 48, 0.12), 0 0 46px rgba(81, 71, 243, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(26px) saturate(180%);
   -webkit-backdrop-filter: blur(26px) saturate(180%);
 }
@@ -283,14 +292,16 @@ main.page-content > .wrapper,
 
 .privacy-accent {
   --accent: var(--upkeep-indigo);
+  --accent-2: var(--upkeep-purple);
   --accent-soft: rgba(81, 71, 243, 0.12);
-  --accent-glow: rgba(81, 71, 243, 0.18);
+  --accent-glow: rgba(81, 71, 243, 0.20);
 }
 
 .support-accent {
   --accent: var(--upkeep-blue);
+  --accent-2: var(--upkeep-indigo);
   --accent-soft: rgba(20, 135, 255, 0.13);
-  --accent-glow: rgba(20, 135, 255, 0.2);
+  --accent-glow: rgba(20, 135, 255, 0.22);
 }
 
 .emergency-accent {
@@ -358,13 +369,23 @@ main.page-content > .wrapper,
 .site-hero-note {
   max-width: 360px;
   justify-self: end;
-  padding: 0 4px 8px 22px;
-  border-left: 2px solid var(--accent-soft);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, var(--accent-soft), rgba(196, 59, 217, 0.08)),
+    rgba(255, 255, 255, 0.62);
+  box-shadow: 0 18px 48px rgba(35, 39, 48, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
 }
 
 .site-hero-note span {
-  display: block;
-  margin-bottom: 8px;
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.66);
   color: var(--accent);
   font-size: 13px;
   font-weight: 780;
@@ -386,7 +407,7 @@ main.page-content > .wrapper,
 .legal-grid,
 .site-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   margin: 0 0 34px;
 }
@@ -396,6 +417,19 @@ main.page-content > .wrapper,
   min-height: 142px;
   padding: 22px;
   border-radius: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-card::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 6px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2, var(--accent)));
+  box-shadow: 0 10px 24px var(--accent-glow);
 }
 
 .legal-callout strong,
@@ -506,6 +540,13 @@ main.page-content > .wrapper,
 .site-page strong {
   color: var(--upkeep-ink);
   font-weight: 760;
+}
+
+@media screen and (max-width: 980px) {
+  .legal-grid,
+  .site-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media screen and (max-width: 760px) {

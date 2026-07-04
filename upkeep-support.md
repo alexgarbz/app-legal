@@ -6,15 +6,15 @@ title: Support
 <section class="site-hero support-accent">
   <div class="site-hero-copy">
     <p class="site-eyebrow">Support</p>
-    <h1>Simple help for Upkeep.</h1>
+    <h1>Help for keeping your home in sync.</h1>
     <p>
-      Quick answers for tasks, reminders, pantry records, emergency details and privacy.
+      Quick answers for tasks, shared homes, iCloud sync, Pantry records, emergency details and privacy.
     </p>
   </div>
 
   <div class="site-hero-note">
     <span>Updated 4 July 2026</span>
-    <p>Home care, made easy. Find the answer you need and get back to your day.</p>
+    <p>Start with the area that feels stuck. Most setup and sync issues are a quick settings check.</p>
   </div>
 </section>
 
@@ -22,16 +22,20 @@ title: Support
 
 <div class="site-grid">
   <div class="site-card">
-    <strong>Tasks</strong>
-    <p>Create recurring tasks, assign them to people and keep overdue work visible.</p>
+    <strong>Tasks and templates</strong>
+    <p>Create recurring tasks, assign them to people, and add ready-made packs for common home routines.</p>
   </div>
   <div class="site-card">
-    <strong>Pantry</strong>
-    <p>Save products and link receipts, warranties, photos, repairs and records.</p>
+    <strong>Products and records</strong>
+    <p>Save products, then link receipts, warranties, photos, repairs and records so the history stays together.</p>
   </div>
   <div class="site-card">
-    <strong>Shared homes</strong>
-    <p>Use iCloud to keep home data synced and invite people to the right home.</p>
+    <strong>iCloud and shared homes</strong>
+    <p>Use Apple iCloud to sync your home, invite people and keep each home’s tasks and records separate.</p>
+  </div>
+  <div class="site-card">
+    <strong>Emergency details</strong>
+    <p>Keep quick guides, local numbers, shutoff locations and important contacts ready when you need them.</p>
   </div>
 </div>
 
@@ -41,11 +45,11 @@ title: Support
 
 ### How do I add a task?
 
-Open **Tasks**, tap the add button, enter the task name, choose a due date and save. You can also set repeat schedules, priority, difficulty, assignee, area, linked products, checklist items and notes.
+Open **Tasks**, tap the add button, enter the task name, choose a due date and save. New tasks can include a repeat schedule, difficulty, assignee, area, linked products, checklist items and notes.
 
 ### How do reminders work?
 
-You can choose **Smart Digest**, **Daily Digest** or **Off**. Smart Digest groups due tasks into morning and afternoon summaries. Daily Digest sends one summary at your chosen time. You can turn reminders off for new tasks from Settings.
+You can choose **Smart Digest**, **Daily Digest** or **Off**. Smart Digest groups due tasks into morning and afternoon summaries. Daily Digest sends one summary at your chosen time. You can turn reminders off from Settings.
 
 ### How do I enable notifications?
 
@@ -57,11 +61,15 @@ Upkeep uses your Apple iCloud account to sync homes, tasks, products, records, e
 
 ### How do shared homes work?
 
-The home owner can invite people to a shared home through Manage Home. People you invite need a simple Upkeep profile so tasks can show who they belong to. Shared homes use Apple iCloud sharing.
+The home owner can invite people to a shared home through Manage Home. People you invite need a simple Upkeep profile so tasks can show who they belong to. Shared homes use Apple iCloud sharing and the owner controls home details and sharing permissions.
 
 ### What is Pantry?
 
-Pantry is where Upkeep keeps products and home records together. A receipt, warranty, repair or photo can stand alone, or it can be linked to a product so the history stays in one place.
+Pantry is where Upkeep keeps products and home records together. A receipt, warranty, repair or photo can stand alone, or it can be linked to a product so the history appears in one place.
+
+### What is the Upkeep Score?
+
+The Upkeep Score gives a simple view of how your home is tracking based on routine, timing and recent completion rhythm. Tap the score card in Upkeep for the breakdown and recommendations.
 
 ### What is the Emergency Manual?
 

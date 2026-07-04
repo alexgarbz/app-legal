@@ -8,14 +8,14 @@ title: Privacy Policy
     <p class="site-eyebrow">Privacy Policy</p>
     <h1>Your home data stays yours.</h1>
     <p>
-      Upkeep helps you manage home care without a separate Upkeep account, ads, cross-app tracking,
-      or selling your personal information.
+      Upkeep helps you manage tasks, products, records, shared homes and emergency details without a separate
+      Upkeep account, advertising tracking, or selling your personal information.
     </p>
   </div>
 
   <div class="site-hero-note">
     <span>Effective 4 July 2026</span>
-    <p>No advertising profile. No selling your data. iCloud sync is handled by Apple.</p>
+    <p>No advertising profile. No selling your data. Sync and shared homes use Apple iCloud services.</p>
   </div>
 </section>
 
@@ -23,16 +23,20 @@ title: Privacy Policy
 
 <div class="site-grid">
   <div class="site-card">
-    <strong>Your home data</strong>
-    <p>Your tasks, records, products, profiles and emergency details are used to run Upkeep.</p>
+    <strong>Used for the app</strong>
+    <p>Your tasks, records, products, profiles and emergency details are used only to run Upkeep features.</p>
   </div>
   <div class="site-card">
-    <strong>iCloud sync</strong>
-    <p>When enabled, Upkeep uses Apple iCloud to sync and share homes across your devices.</p>
+    <strong>Apple iCloud</strong>
+    <p>When enabled, Upkeep uses Apple CloudKit to sync and share homes across your devices.</p>
   </div>
   <div class="site-card">
     <strong>No tracking</strong>
     <p>Upkeep does not track you across apps or websites for advertising.</p>
+  </div>
+  <div class="site-card">
+    <strong>Local settings</strong>
+    <p>Notification style, theme and card display preferences stay on your device.</p>
   </div>
 </div>
 
@@ -52,7 +56,7 @@ Upkeep stores the information you choose to add, such as:
 
 ## How Your Information Is Used
 
-Your information is used only to run Upkeep features: showing tasks, assigning tasks to people, scheduling reminders, syncing shared homes, organising pantry records and keeping emergency details available.
+Your information is used only to run Upkeep features: showing tasks, assigning tasks to people, calculating the Upkeep Score, scheduling reminders, syncing shared homes, organising Pantry records and keeping emergency details available.
 
 Upkeep does not use your home information for advertising, profiling, data brokerage or cross-app tracking.
 
@@ -64,13 +68,15 @@ Apple handles iCloud accounts, CloudKit, device backups, diagnostics and App Sto
 
 ## Shared Homes
 
-If you share a home, people you invite may be able to view or edit information in that shared home depending on their role. Shared home data can include tasks, products, records, emergency details, member profiles and completion history. Only share a home with people you trust.
+If you share a home, people you invite may be able to view or edit information in that shared home depending on their role. Shared home data can include tasks, products, records, emergency details, member profiles and completion history. Homes remain separate from each other, so data from one home should not appear in another. Only share a home with people you trust.
 
 ## Photos and Notifications
 
 Upkeep only uses photos or images you choose to add through the app.
 
 Notifications are optional. They are used for task reminders and digest alerts if enabled, and can be changed in iOS Settings or Upkeep settings.
+
+Notification preferences are local to the device. Shared homes do not copy another person's notification settings.
 
 ## What Upkeep Does Not Collect
 
