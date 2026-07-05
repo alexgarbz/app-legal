@@ -27,14 +27,14 @@
   // Feedback links compose an email without the address appearing anywhere in
   // the page source as a complete string (deters address scrapers).
   (function () {
-    var u = ['alexj', 'garbin'].join('');
-    var d = ['gmail', 'com'].join('.');
+    var u = ['support'].join('');
+    var d = ['upkeep', 'app'].join('.');
     document.addEventListener('click', function (e) {
       var link = e.target.closest('[data-feedback]');
       if (!link) return;
       e.preventDefault();
       window.location.href = 'mailto:' + u + '@' + d +
-        '?subject=' + encodeURIComponent('Upkeep feedback');
+        '?subject=' + encodeURIComponent('KeptUp feedback');
     });
   })();
 </script>
