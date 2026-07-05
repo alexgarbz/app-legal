@@ -2,7 +2,7 @@
 layout: default
 title: "Krov - Home care, made simple"
 description: "Krov keeps home task reminders, warranties, receipts, important records, and emergency essentials together under one roof — in one private iPhone app."
-image: /assets/upkeep-iphone-mockup-2026-07.png
+image: /assets/krov-iphone-home-2026-07.png
 permalink: /
 ---
 
@@ -39,7 +39,7 @@ permalink: /
 
         <div class="landing-device-wrap hero-in" style="--in-delay: 0.2s" aria-label="Krov app preview">
           <div class="device-float">
-            <img class="device-mockup" src="{{ '/assets/upkeep-iphone-mockup-2026-07.png' | relative_url }}" alt="Krov home screen preview in a Deep Blue iPhone" decoding="async" fetchpriority="high">
+            <img class="device-mockup" src="{{ '/assets/krov-iphone-home-2026-07.png' | relative_url }}" alt="Krov home screen preview on iPhone" decoding="async" fetchpriority="high">
           </div>
         </div>
       </div>
@@ -183,23 +183,6 @@ permalink: /
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
     root.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-
-    // Pointer parallax on the hero device — subtle, spring-eased via CSS.
-    var device = root.querySelector('.device-mockup');
-    var hero = root.querySelector('.landing-hero');
-    if (device && hero && window.matchMedia('(hover: hover)').matches) {
-      hero.addEventListener('pointermove', function (e) {
-        var r = hero.getBoundingClientRect();
-        var dx = (e.clientX - r.left) / r.width - 0.5;
-        var dy = (e.clientY - r.top) / r.height - 0.5;
-        device.style.setProperty('--px', (dx * 18).toFixed(1) + 'px');
-        device.style.setProperty('--py', (dy * 18).toFixed(1) + 'px');
-      });
-      hero.addEventListener('pointerleave', function () {
-        device.style.setProperty('--px', '0px');
-        device.style.setProperty('--py', '0px');
-      });
-    }
 
     // Cursor-tracking spotlight on each feature tile.
     root.querySelectorAll('.feature-tile').forEach(function (tile) {
@@ -768,11 +751,6 @@ body {
   50% { transform: translateY(-14px); }
 }
 
-.device-mockup {
-  transform: translate3d(var(--px, 0px), var(--py, 0px), 0);
-  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
 /* Scroll cue at the base of the hero. */
 .hero-scroll-cue {
   position: absolute;
@@ -838,38 +816,6 @@ body {
   z-index: 1;
 }
 
-/* Sheen sweep across the App Store button on hover. */
-.app-store-button {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.app-store-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -60%;
-  width: 40%;
-  height: 100%;
-  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
-  transform: skewX(-18deg);
-  opacity: 0;
-  pointer-events: none;
-}
-
-@media (hover: hover) {
-  .app-store-button:hover::after {
-    animation: sheen 0.9s ease;
-  }
-}
-
-@keyframes sheen {
-  0% { left: -60%; opacity: 0; }
-  20% { opacity: 1; }
-  100% { left: 130%; opacity: 0; }
-}
-
 /* Richer scroll reveal — a touch of blur and scale as sections arrive. */
 .upkeep-landing.reveal-ready .reveal {
   filter: blur(6px);
@@ -919,7 +865,7 @@ body {
 
 @media (max-width: 680px) {
   .landing-hero {
-    padding: 88px 18px 36px;
+    padding: 118px 18px 36px;
   }
 
   .landing-copy h1 {

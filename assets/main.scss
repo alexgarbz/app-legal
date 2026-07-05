@@ -66,12 +66,12 @@ body {
   justify-content: space-between;
   gap: 16px;
   padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.74);
-  box-shadow: 0 12px 36px rgba(35, 39, 48, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(26px) saturate(180%);
-  -webkit-backdrop-filter: blur(26px) saturate(180%);
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 10px 34px rgba(35, 39, 48, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 0 0 1px rgba(255, 255, 255, 0.30);
+  backdrop-filter: blur(34px) saturate(190%);
+  -webkit-backdrop-filter: blur(34px) saturate(190%);
 }
 
 .global-brand,
@@ -792,7 +792,7 @@ main.page-content > .wrapper,
   .legal-hero,
   .site-hero {
     grid-template-columns: 1fr;
-    padding-top: 112px;
+    padding-top: 132px;
   }
 
   .legal-hero-copy h1,
@@ -901,9 +901,9 @@ main.page-content > .wrapper,
 
   .global-floating-nav,
   .site-header .wrapper.custom-header-wrapper {
-    border-color: rgba(255, 255, 255, 0.10);
-    background: rgba(24, 28, 40, 0.72);
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(22, 26, 38, 0.55);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.50), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   }
 
   .global-brand,
@@ -963,12 +963,6 @@ main.page-content > .wrapper,
       background: var(--upkeep-ink);
     }
   }
-
-  /* Scroll-condensed nav shadow reads darker on dark. */
-  .global-floating-header.scrolled .global-floating-nav {
-    background: rgba(24, 28, 40, 0.86);
-    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  }
 }
 
 /* ============================================================
@@ -980,11 +974,12 @@ main.page-content > .wrapper,
   transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Once the page scrolls, the floating pill tightens and lifts a touch. */
+/* Once the page scrolls, the floating pill tightens and lifts a touch while
+   staying translucent glass. */
 .global-floating-header.scrolled .global-floating-nav {
   padding: 7px 10px;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 16px 44px rgba(35, 39, 48, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.70);
+  box-shadow: 0 16px 44px rgba(35, 39, 48, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.95), inset 0 0 0 1px rgba(255, 255, 255, 0.30);
 }
 
 .global-brand img,
@@ -1061,5 +1056,14 @@ main.page-content > .wrapper,
   .legal-callout:hover,
   .global-nav-links .global-nav-cta:hover {
     transform: none !important;
+  }
+}
+
+/* Dark-mode scrolled nav — declared last so it always wins over the light
+   scrolled rule when both match, keeping the header dark on scroll. */
+@media (prefers-color-scheme: dark) {
+  .global-floating-header.scrolled .global-floating-nav {
+    background: rgba(22, 26, 38, 0.66);
+    box-shadow: 0 16px 46px rgba(0, 0, 0, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   }
 }
