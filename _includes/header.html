@@ -1,7 +1,7 @@
 <header class="global-floating-header" role="banner">
   <nav class="global-floating-nav" aria-label="Main navigation">
     <a class="global-brand" rel="author" href="{{ "/" | relative_url }}">
-      <img src="{{ site.logo | relative_url }}" alt="Upkeep app icon" width="40" height="40">
+      <img src="{{ site.logo | relative_url }}" alt="Krov app icon" width="40" height="40">
       <span>{{ site.title | escape }}</span>
     </a>
 
@@ -28,13 +28,13 @@
   // the page source as a complete string (deters address scrapers).
   (function () {
     var u = ['support'].join('');
-    var d = ['upkeep', 'app'].join('.');
+    var d = ['krov', 'app'].join('.');
     document.addEventListener('click', function (e) {
       var link = e.target.closest('[data-feedback]');
       if (!link) return;
       e.preventDefault();
       window.location.href = 'mailto:' + u + '@' + d +
-        '?subject=' + encodeURIComponent('KeptUp feedback');
+        '?subject=' + encodeURIComponent('Krov feedback');
     });
   })();
 </script>

@@ -8,8 +8,8 @@ title: Privacy Policy
     <p class="site-eyebrow">Privacy Policy</p>
     <h1>Your home data stays yours.</h1>
     <p>
-      Upkeep helps you manage tasks, products, records, shared homes and emergency details without a separate
-      Upkeep account, advertising tracking, or selling your personal information.
+      Krov helps you manage tasks, products, records, shared homes and emergency details without a separate
+      Krov account, advertising tracking, or selling your personal information.
     </p>
   </div>
 
@@ -23,15 +23,15 @@ title: Privacy Policy
 <div class="site-grid">
   <div class="site-card">
     <strong>Used for the app</strong>
-    <p>Your tasks, records, products, profiles and emergency details are used only to run Upkeep features.</p>
+    <p>Your tasks, records, products, profiles and emergency details are used only to run Krov features.</p>
   </div>
   <div class="site-card">
     <strong>Apple iCloud</strong>
-    <p>When enabled, Upkeep uses Apple CloudKit to sync and share homes across your devices.</p>
+    <p>When enabled, Krov uses Apple CloudKit to sync and share homes across your devices.</p>
   </div>
   <div class="site-card">
     <strong>No tracking</strong>
-    <p>Upkeep does not track you across apps or websites for advertising.</p>
+    <p>Krov does not track you across apps or websites for advertising.</p>
   </div>
   <div class="site-card">
     <strong>Local settings</strong>
@@ -43,7 +43,7 @@ title: Privacy Policy
 
 ## Information You Add
 
-Upkeep stores the information you choose to add, such as:
+Krov stores the information you choose to add, such as:
 
 - tasks, reminders and completion history
 - product, receipt, warranty and home records
@@ -55,15 +55,15 @@ Upkeep stores the information you choose to add, such as:
 
 ## How Your Information Is Used
 
-Your information is used only to run Upkeep features: showing tasks, assigning tasks to people, calculating the Upkeep Score, scheduling reminders, syncing shared homes, organising Pantry records and keeping emergency details available.
+Your information is used only to run Krov features: showing tasks, assigning tasks to people, calculating the Krov Score, scheduling reminders, syncing shared homes, organising Pantry records and keeping emergency details available.
 
-Upkeep does not use your home information for advertising, profiling, data brokerage or cross-app tracking.
+Krov does not use your home information for advertising, profiling, data brokerage or cross-app tracking.
 
 ## Where Data Lives
 
-Upkeep stores app data on your device. If iCloud sync or shared homes are used, Upkeep also stores synced home data in your Apple iCloud account using CloudKit.
+Krov stores app data on your device. If iCloud sync or shared homes are used, Krov also stores synced home data in your Apple iCloud account using CloudKit.
 
-Apple handles iCloud accounts, CloudKit, device backups, diagnostics and App Store information under Apple's privacy policies and your device settings. Upkeep does not operate its own account system for your home data.
+Apple handles iCloud accounts, CloudKit, device backups, diagnostics and App Store information under Apple's privacy policies and your device settings. Krov does not operate its own account system for your home data.
 
 ## Shared Homes
 
@@ -71,21 +71,21 @@ If you share a home, people you invite may be able to view or edit information i
 
 ## Photos and Notifications
 
-Upkeep only uses photos or images you choose to add through the app.
+Krov only uses photos or images you choose to add through the app.
 
-Notifications are optional. They are used for task reminders and digest alerts if enabled, and can be changed in iOS Settings or Upkeep settings.
+Notifications are optional. They are used for task reminders and digest alerts if enabled, and can be changed in iOS Settings or Krov settings.
 
 Notification preferences are local to the device. Shared homes do not copy another person's notification settings.
 
-## What Upkeep Does Not Collect
+## What Krov Does Not Collect
 
-Upkeep does not intentionally collect or access your contacts, calendar, precise location, health data, payment card information, browsing history or advertising identifiers.
+Krov does not intentionally collect or access your contacts, calendar, precise location, health data, payment card information, browsing history or advertising identifiers.
 
-Upkeep does not use third-party advertising SDKs or tracking tools.
+Krov does not use third-party advertising SDKs or tracking tools.
 
 ## Your Choices
 
-You can edit or delete tasks, products, records, contacts, locations, profiles and notes inside Upkeep. You can also delete the app to remove locally stored app data, though Apple-managed backups or iCloud-synced shared data may keep copies depending on your settings and shared-home membership.
+You can edit or delete tasks, products, records, contacts, locations, profiles and notes inside Krov. You can also delete the app to remove locally stored app data, though Apple-managed backups or iCloud-synced shared data may keep copies depending on your settings and shared-home membership.
 
 ## Changes
 
@@ -93,7 +93,7 @@ This policy may be updated from time to time. When it changes, the updated versi
 
 ## Contact
 
-For privacy questions, contact support through the App Store listing or the [Upkeep support page]({{ "/upkeep-support" | relative_url }}).
+For privacy questions, contact support through the App Store listing or the [Krov support page]({{ "/upkeep-support" | relative_url }}).
 
 </div>
 

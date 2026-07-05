@@ -52,23 +52,23 @@ You can choose **Smart Digest**, **Daily Digest** or **Off**. Smart Digest group
 
 ### How do I enable notifications?
 
-Open **Settings -> Notifications -> Upkeep** on your iPhone and make sure notifications are enabled. You can choose your reminder style inside Upkeep settings.
+Open **Settings -> Notifications -> Krov** on your iPhone and make sure notifications are enabled. You can choose your reminder style inside Krov settings.
 
 ### How does iCloud sync work?
 
-Upkeep uses your Apple iCloud account to sync homes, tasks, products, records, emergency details and profiles between your devices. Make sure you are signed in to iCloud, iCloud Drive is enabled and Upkeep has iCloud access.
+Krov uses your Apple iCloud account to sync homes, tasks, products, records, emergency details and profiles between your devices. Make sure you are signed in to iCloud, iCloud Drive is enabled and Krov has iCloud access.
 
 ### How do shared homes work?
 
-The home owner can invite people to a shared home through Manage Home. People you invite need a simple Upkeep profile so tasks can show who they belong to. Shared homes use Apple iCloud sharing and the owner controls home details and sharing permissions.
+The home owner can invite people to a shared home through Manage Home. People you invite need a simple Krov profile so tasks can show who they belong to. Shared homes use Apple iCloud sharing and the owner controls home details and sharing permissions.
 
 ### What is Pantry?
 
-Pantry is where Upkeep keeps products and home records together. A receipt, warranty, repair or photo can stand alone, or it can be linked to a product so the history appears in one place.
+Pantry is where Krov keeps products and home records together. A receipt, warranty, repair or photo can stand alone, or it can be linked to a product so the history appears in one place.
 
-### What is the Upkeep Score?
+### What is the Krov Score?
 
-The Upkeep Score gives a simple view of how your home is tracking based on routine, timing and recent completion rhythm. Tap the score card in Upkeep for the breakdown and recommendations.
+The Krov Score gives a simple view of how your home is tracking based on routine, timing and recent completion rhythm. Tap the score card in Krov for the breakdown and recommendations.
 
 ### What is the Emergency Manual?
 
@@ -78,7 +78,7 @@ The Emergency Manual stores key shutoff locations, local quick-call information,
 
 ### I am not receiving notifications
 
-Check **Settings -> Notifications -> Upkeep**, confirm the task has a due date or reminder, then reopen Upkeep. Restart your iPhone if alerts still do not appear.
+Check **Settings -> Notifications -> Krov**, confirm the task has a due date or reminder, then reopen Krov. Restart your iPhone if alerts still do not appear.
 
 ### A task did not repeat
 
@@ -86,19 +86,19 @@ Check the task's repeat schedule. If the task was completed, edited or moved, it
 
 ### My data is missing
 
-Check that you are signed in to the same Apple ID, iCloud Drive is enabled and Upkeep is allowed to use iCloud. If you joined a shared home, make sure the invite was accepted with the same Apple account. Local-only starter homes may not appear on another device unless they have synced through iCloud.
+Check that you are signed in to the same Apple ID, iCloud Drive is enabled and Krov is allowed to use iCloud. If you joined a shared home, make sure the invite was accepted with the same Apple account. Local-only starter homes may not appear on another device unless they have synced through iCloud.
 
 ### Something looks wrong
 
-Close and reopen Upkeep, make sure you are on the latest version, and restart your iPhone if the issue continues.
+Close and reopen Krov, make sure you are on the latest version, and restart your iPhone if the issue continues.
 
 ## Privacy
 
-Upkeep does not sell your personal information and does not track you across apps or websites. iCloud sync and shared homes use Apple iCloud services. Read the [Privacy Policy]({{ "/upkeep-privacy-policy" | relative_url }}).
+Krov does not sell your personal information and does not track you across apps or websites. iCloud sync and shared homes use Apple iCloud services. Read the [Privacy Policy]({{ "/upkeep-privacy-policy" | relative_url }}).
 
 ## Contact
 
-For support, contact Upkeep through the App Store listing.
+For support, contact Krov through the App Store listing.
 
 </div>
 
