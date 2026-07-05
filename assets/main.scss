@@ -963,4 +963,103 @@ main.page-content > .wrapper,
       background: var(--upkeep-ink);
     }
   }
+
+  /* Scroll-condensed nav shadow reads darker on dark. */
+  .global-floating-header.scrolled .global-floating-nav {
+    background: rgba(24, 28, 40, 0.86);
+    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* ============================================================
+   Shared motion — nav condense, card hover, page entrance.
+   All disabled under prefers-reduced-motion at the end.
+   ============================================================ */
+
+.global-floating-nav {
+  transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Once the page scrolls, the floating pill tightens and lifts a touch. */
+.global-floating-header.scrolled .global-floating-nav {
+  padding: 7px 10px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 16px 44px rgba(35, 39, 48, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+.global-brand img,
+.global-nav-links .global-nav-cta,
+.app-store-button {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.global-nav-links .global-nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(81, 71, 243, 0.36);
+}
+
+/* Support / privacy cards gain the same lift as the landing tiles. */
+.site-card,
+.legal-callout {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+@media (hover: hover) {
+  .site-card:hover,
+  .legal-callout:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(35, 39, 48, 0.12);
+    border-color: color-mix(in srgb, var(--accent, #5242e0) 32%, var(--upkeep-card-line));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-hero-copy,
+  .legal-hero-copy,
+  .site-hero-note,
+  .legal-summary-card,
+  .site-content,
+  .legal-content {
+    animation: pageRise 0.85s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .site-hero-note,
+  .legal-summary-card { animation-delay: 0.08s; }
+
+  .site-content,
+  .legal-content { animation-delay: 0.12s; }
+
+  .site-grid > *,
+  .legal-grid > * {
+    animation: pageRise 0.75s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .site-grid > *:nth-child(1),
+  .legal-grid > *:nth-child(1) { animation-delay: 0.06s; }
+  .site-grid > *:nth-child(2),
+  .legal-grid > *:nth-child(2) { animation-delay: 0.12s; }
+  .site-grid > *:nth-child(3),
+  .legal-grid > *:nth-child(3) { animation-delay: 0.18s; }
+  .site-grid > *:nth-child(4),
+  .legal-grid > *:nth-child(4) { animation-delay: 0.24s; }
+}
+
+@keyframes pageRise {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .global-floating-nav,
+  .site-card,
+  .legal-callout,
+  .global-nav-links .global-nav-cta {
+    transition: none !important;
+  }
+
+  .site-card:hover,
+  .legal-callout:hover,
+  .global-nav-links .global-nav-cta:hover {
+    transform: none !important;
+  }
 }

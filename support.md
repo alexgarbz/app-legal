@@ -99,7 +99,7 @@ Krov does not sell your personal information and does not track you across apps 
 
 ## Contact
 
-For support, contact Krov through the App Store listing.
+Have a question, found a bug or want to share feedback? <a href="#" data-feedback>Send feedback</a> and it will reach us directly. You can also contact Krov through the App Store listing.
 
 </div>
 

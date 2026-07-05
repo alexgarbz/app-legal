@@ -9,32 +9,44 @@ permalink: /
 <div class="upkeep-landing">
   <main>
     <section class="landing-hero">
+      <div class="hero-aurora" aria-hidden="true">
+        <span class="aurora-blob blob-a"></span>
+        <span class="aurora-blob blob-b"></span>
+        <span class="aurora-blob blob-c"></span>
+      </div>
+
       <div class="landing-hero-grid">
         <div class="landing-copy">
-          <p class="landing-eyebrow">Home care, made simple.</p>
-          <h1>A little less to remember. A lot more under control.</h1>
-          <p class="landing-lede">
+          <p class="landing-eyebrow hero-in" style="--in-delay: 0.02s">Home care, made simple.</p>
+          <h1 class="hero-in" style="--in-delay: 0.09s">A little less to remember. A lot more <span class="grad-word">under&nbsp;control.</span></h1>
+          <p class="landing-lede hero-in" style="--in-delay: 0.17s">
             Krov keeps home task reminders, warranties, receipts, important records, and emergency essentials together under one roof — in one private iPhone app.
           </p>
 
-          <div class="landing-actions">
+          <div class="landing-actions hero-in" style="--in-delay: 0.25s">
             <a class="app-store-button" href="https://apps.apple.com/au/app/upkeep/id6777450786">
               <img src="{{ '/assets/download-on-app-store.svg' | relative_url }}" alt="Download Krov on the App Store" decoding="async">
             </a>
             <a class="glass-link" href="#features">Explore features</a>
           </div>
 
-          <div class="landing-trust">
+          <div class="landing-trust hero-in" style="--in-delay: 0.32s">
             <span>iCloud sync</span>
             <span>No tracking</span>
             <span>Built for shared homes</span>
           </div>
         </div>
 
-        <div class="landing-device-wrap" aria-label="Krov app preview">
-          <img class="device-mockup" src="{{ '/assets/upkeep-iphone-mockup-2026-07.png' | relative_url }}" alt="Krov home screen preview in a Deep Blue iPhone" decoding="async" fetchpriority="high">
+        <div class="landing-device-wrap hero-in" style="--in-delay: 0.2s" aria-label="Krov app preview">
+          <div class="device-float">
+            <img class="device-mockup" src="{{ '/assets/upkeep-iphone-mockup-2026-07.png' | relative_url }}" alt="Krov home screen preview in a Deep Blue iPhone" decoding="async" fetchpriority="high">
+          </div>
         </div>
       </div>
+
+      <a class="hero-scroll-cue" href="#features" aria-label="Scroll to features">
+        <span></span>
+      </a>
     </section>
 
     <section class="landing-section" id="features">
@@ -171,6 +183,32 @@ permalink: /
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
     root.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+    // Pointer parallax on the hero device — subtle, spring-eased via CSS.
+    var device = root.querySelector('.device-mockup');
+    var hero = root.querySelector('.landing-hero');
+    if (device && hero && window.matchMedia('(hover: hover)').matches) {
+      hero.addEventListener('pointermove', function (e) {
+        var r = hero.getBoundingClientRect();
+        var dx = (e.clientX - r.left) / r.width - 0.5;
+        var dy = (e.clientY - r.top) / r.height - 0.5;
+        device.style.setProperty('--px', (dx * 18).toFixed(1) + 'px');
+        device.style.setProperty('--py', (dy * 18).toFixed(1) + 'px');
+      });
+      hero.addEventListener('pointerleave', function () {
+        device.style.setProperty('--px', '0px');
+        device.style.setProperty('--py', '0px');
+      });
+    }
+
+    // Cursor-tracking spotlight on each feature tile.
+    root.querySelectorAll('.feature-tile').forEach(function (tile) {
+      tile.addEventListener('pointermove', function (e) {
+        var r = tile.getBoundingClientRect();
+        tile.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        tile.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
   })();
 </script>
 
@@ -239,7 +277,7 @@ body {
 .upkeep-landing.reveal-ready .reveal {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
   will-change: opacity, transform;
 }
 
@@ -624,6 +662,223 @@ body {
   border-color: currentColor;
 }
 
+/* ============================================================
+   Motion & delight — all guarded by prefers-reduced-motion.
+   ============================================================ */
+
+/* Animated gradient keyword in the headline. */
+.grad-word {
+  background: linear-gradient(100deg, var(--blue), var(--indigo) 40%, var(--purple) 70%, var(--blue));
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradShift 7s ease-in-out infinite;
+}
+
+@keyframes gradShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Hero entrance — content lifts and fades in on load, staggered. */
+.hero-in {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: heroIn 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  animation-delay: var(--in-delay, 0s);
+}
+
+@keyframes heroIn {
+  to { opacity: 1; transform: none; }
+}
+
+/* Drifting aurora behind the hero — the app's halo colours, alive. */
+.hero-aurora {
+  position: absolute;
+  inset: -20% -10% 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  opacity: 0.38;
+  will-change: transform;
+}
+
+.blob-a {
+  top: -6%;
+  left: 6%;
+  width: 42vw;
+  max-width: 560px;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(20, 135, 255, 0.55), transparent 62%);
+  animation: drift1 20s ease-in-out infinite;
+}
+
+.blob-b {
+  top: 2%;
+  right: 4%;
+  width: 40vw;
+  max-width: 520px;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(196, 59, 217, 0.42), transparent 62%);
+  animation: drift2 24s ease-in-out infinite;
+}
+
+.blob-c {
+  bottom: -14%;
+  left: 34%;
+  width: 46vw;
+  max-width: 620px;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(82, 66, 224, 0.40), transparent 64%);
+  animation: drift3 28s ease-in-out infinite;
+}
+
+@keyframes drift1 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(6%, 5%, 0) scale(1.08); }
+}
+
+@keyframes drift2 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.05); }
+  50% { transform: translate3d(-7%, 4%, 0) scale(0.96); }
+}
+
+@keyframes drift3 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(4%, -6%, 0) scale(1.1); }
+}
+
+.landing-hero-grid { z-index: 1; }
+
+/* Gentle continuous float on the device, with JS pointer parallax layered on. */
+.device-float {
+  animation: floaty 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+.device-mockup {
+  transform: translate3d(var(--px, 0px), var(--py, 0px), 0);
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Scroll cue at the base of the hero. */
+.hero-scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  z-index: 2;
+  width: 26px;
+  height: 40px;
+  transform: translateX(-50%);
+  border: 2px solid var(--card-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: grid;
+  place-items: start center;
+  padding-top: 7px;
+  opacity: 0;
+  animation: heroIn 0.9s ease 0.5s forwards;
+}
+
+.hero-scroll-cue span {
+  width: 4px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--indigo);
+  animation: scrollDot 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollDot {
+  0% { transform: translateY(0); opacity: 0; }
+  30% { opacity: 1; }
+  70% { transform: translateY(10px); opacity: 1; }
+  100% { transform: translateY(14px); opacity: 0; }
+}
+
+/* Cursor-tracking spotlight on the feature tiles. */
+.feature-tile {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.feature-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in srgb, var(--tile-tint, var(--indigo)) 22%, transparent), transparent 62%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .feature-tile:hover::before { opacity: 1; }
+}
+
+.feature-tile > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Sheen sweep across the App Store button on hover. */
+.app-store-button {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.app-store-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-18deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .app-store-button:hover::after {
+    animation: sheen 0.9s ease;
+  }
+}
+
+@keyframes sheen {
+  0% { left: -60%; opacity: 0; }
+  20% { opacity: 1; }
+  100% { left: 130%; opacity: 0; }
+}
+
+/* Richer scroll reveal — a touch of blur and scale as sections arrive. */
+.upkeep-landing.reveal-ready .reveal {
+  filter: blur(6px);
+}
+
+.upkeep-landing.reveal-ready .reveal.in {
+  filter: none;
+}
+
 @media (max-width: 940px) {
   .landing-hero {
     min-height: auto;
@@ -681,6 +936,15 @@ body {
 
   .device-mockup {
     width: min(330px, 88vw);
+  }
+
+  .hero-scroll-cue {
+    display: none;
+  }
+
+  .aurora-blob {
+    opacity: 0.4;
+    filter: blur(56px);
   }
 
   .landing-section {
@@ -753,6 +1017,11 @@ body {
     background: radial-gradient(circle, rgba(148, 139, 255, 0.14), transparent 62%);
   }
 
+  /* Aurora glows a touch brighter against the deep background. */
+  .aurora-blob {
+    opacity: 0.5;
+  }
+
   .feedback-link {
     border-bottom-color: rgba(244, 246, 251, 0.28);
   }
@@ -811,6 +1080,25 @@ body {
   .glass-link:hover,
   .feature-tile:hover {
     transform: none;
+  }
+
+  /* Entrance animations are disabled above, so pin content visible. */
+  .hero-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .device-mockup {
+    transform: none !important;
+  }
+
+  .hero-aurora,
+  .hero-scroll-cue {
+    display: none !important;
+  }
+
+  .grad-word {
+    background-position: 0% 50% !important;
   }
 }
 </style>

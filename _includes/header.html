@@ -37,4 +37,15 @@
         '?subject=' + encodeURIComponent('Krov feedback');
     });
   })();
+
+  // Condense the floating nav once the page scrolls past the top.
+  (function () {
+    var header = document.querySelector('.global-floating-header');
+    if (!header) return;
+    var onScroll = function () {
+      header.classList.toggle('scrolled', window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
 </script>
