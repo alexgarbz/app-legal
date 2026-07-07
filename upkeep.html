@@ -168,9 +168,7 @@ permalink: /
           <div class="ticket-stripe"><i></i><i></i><i></i></div>
 
           <div class="ticket-perf">
-            <span class="ticket-notch left"></span>
             <span class="ticket-dash"></span>
-            <span class="ticket-notch right"></span>
           </div>
 
           <div class="ticket-foot">
@@ -182,28 +180,26 @@ permalink: /
         </div>
 
         <div class="name-story">
-          <p class="name-lead">Krov is the Croatian word for roof — the part of a home that quietly protects everything beneath it.</p>
-
           <ul class="name-notes">
             <li>
               <span class="name-note-dot blue"></span>
               <div>
                 <strong>The part that protects</strong>
-                <p>A roof is what turns a house into a home, and it only keeps doing that when it&rsquo;s looked after.</p>
+                <p>A roof is what turns a house into a home. It quietly shelters everything beneath it, and only keeps doing that when it is looked after.</p>
               </div>
             </li>
             <li>
               <span class="name-note-dot green"></span>
               <div>
                 <strong>Keeping it all up</strong>
-                <p>That&rsquo;s the idea behind Krov: your roof over everything, one small task at a time.</p>
+                <p>That is the idea behind Krov. It is your roof over everything, helping you keep the whole home in good shape, one small task at a time.</p>
               </div>
             </li>
             <li>
               <span class="name-note-dot red"></span>
               <div>
                 <strong>A nod to home</strong>
-                <p>A small tribute to my Croatian heritage — homes built to last, and cared for across generations.</p>
+                <p>Krov is also a small tribute to my Croatian heritage, a reminder that the homes we care for are meant to last for generations.</p>
               </div>
             </li>
           </ul>
@@ -304,7 +300,6 @@ body {
   --orange: #ff8a25;
   --green: #34c759;
   --ticket-bg: #ffffff;
-  --ticket-notch: #efebe3;
   min-height: 100vh;
   color: var(--ink);
   background:
@@ -926,19 +921,19 @@ body {
   --tblue: #123885;
   position: relative;
   overflow: hidden;
-  border-radius: 26px;
+  border-radius: 28px;
   background: var(--ticket-bg);
   border: 1px solid var(--card-line);
-  box-shadow: 0 24px 60px rgba(35, 39, 48, 0.15);
+  box-shadow: 0 14px 40px rgba(35, 39, 48, 0.10);
   font-family: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, monospace;
-  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.45s ease;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease;
   will-change: transform;
 }
 
 @media (hover: hover) {
   .krov-ticket:hover {
-    transform: translateY(-6px) rotate(-0.7deg);
-    box-shadow: 0 34px 82px rgba(35, 39, 48, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 22px 52px rgba(35, 39, 48, 0.14);
   }
 }
 
@@ -1042,18 +1037,6 @@ body {
   border-top: 2px dashed color-mix(in srgb, var(--ink) 22%, transparent);
 }
 
-.ticket-notch {
-  position: absolute;
-  top: 0;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--ticket-notch);
-}
-
-.ticket-notch.left { left: -11px; }
-.ticket-notch.right { right: -11px; }
-
 .ticket-foot { padding: 16px 22px 22px; text-align: center; }
 
 .ticket-barcode {
@@ -1068,16 +1051,7 @@ body {
 .ticket-barcode i { width: 2px; height: 30px; background: var(--ink); opacity: 0.82; }
 .ticket-code { font-size: 11px; font-weight: 500; letter-spacing: 2px; color: var(--muted); }
 
-.name-story .name-lead {
-  margin: 0 0 24px;
-  font-size: clamp(19px, 2.1vw, 25px);
-  line-height: 1.5;
-  color: var(--ink);
-  font-weight: 640;
-  text-wrap: pretty;
-}
-
-.name-notes { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.name-notes { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
 .name-notes li { display: flex; gap: 14px; align-items: flex-start; }
 
 .name-note-dot {
@@ -1234,7 +1208,6 @@ body {
     --orange: #ffa14f;
     --green: #4cd964;
     --ticket-bg: #1b2030;
-    --ticket-notch: #10131c;
     color: var(--ink);
     background:
       radial-gradient(circle at 12% 11%, rgba(20, 135, 255, 0.16), transparent 28%),
@@ -1297,7 +1270,7 @@ body {
   }
 
   .krov-ticket {
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.44);
   }
 
   .ticket-stripe i:nth-child(2) { background: #e9ecf3; }
@@ -1308,7 +1281,7 @@ body {
     }
 
     .krov-ticket:hover {
-      box-shadow: 0 34px 82px rgba(0, 0, 0, 0.58);
+      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.52);
     }
   }
 }

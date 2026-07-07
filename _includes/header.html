@@ -1,11 +1,3 @@
-<div class="krov-ribbon" id="krov-ribbon" hidden>
-  <a class="krov-ribbon-msg" href="{{ '/' | relative_url }}#name">
-    <span class="krov-ribbon-flag" aria-hidden="true"><i></i><i></i><i></i></span>
-    <span class="krov-ribbon-text"><strong>Krov</strong> is Croatian for &ldquo;roof.&rdquo; <span class="krov-ribbon-cta">Read the story &rarr;</span></span>
-  </a>
-  <button type="button" class="krov-ribbon-close" id="krov-ribbon-close" aria-label="Dismiss">&times;</button>
-</div>
-
 <header class="global-floating-header" role="banner">
   <nav class="global-floating-nav" aria-label="Main navigation">
     <a class="global-brand" rel="author" href="{{ "/" | relative_url }}">
@@ -56,24 +48,5 @@
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-  })();
-
-  // Show the "name" ribbon until the visitor dismisses it (remembered locally).
-  (function () {
-    var ribbon = document.getElementById('krov-ribbon');
-    if (!ribbon) return;
-    var KEY = 'krovRibbonDismissed';
-    try { if (localStorage.getItem(KEY)) return; } catch (e) {}
-    ribbon.hidden = false;
-    document.body.classList.add('has-ribbon');
-    var close = document.getElementById('krov-ribbon-close');
-    if (close) {
-      close.addEventListener('click', function (e) {
-        e.preventDefault();
-        ribbon.hidden = true;
-        document.body.classList.remove('has-ribbon');
-        try { localStorage.setItem(KEY, '1'); } catch (e2) {}
-      });
-    }
   })();
 </script>
