@@ -23,6 +23,7 @@
   --upkeep-green: #34c759;
   --upkeep-red: #ff3b30;
   --upkeep-bg: #f4f2ee; /* app appBackground */
+  --ticket-bg: #ffffff;
 }
 
 html {
@@ -874,6 +875,7 @@ main.page-content > .wrapper,
     --upkeep-orange: #ffa14f;
     --upkeep-green: #4cd964;
     --upkeep-bg: #0d0f16;
+    --ticket-bg: #1b2030;
   }
 
   .privacy-accent {
@@ -1066,4 +1068,243 @@ main.page-content > .wrapper,
     background: rgba(22, 26, 38, 0.66);
     box-shadow: 0 16px 46px rgba(0, 0, 0, 0.58), inset 0 1px 0 rgba(255, 255, 255, 0.12);
   }
+}
+
+/* ============================================================
+   The Name page — a Croatian ferry boarding pass
+   ============================================================ */
+.name-page {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 150px 0 90px;
+}
+
+.name-hero {
+  max-width: 720px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.name-eyebrow {
+  margin: 0 0 12px;
+  color: var(--upkeep-indigo);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.name-hero h1 {
+  margin: 0;
+  color: var(--upkeep-ink);
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.03;
+  font-weight: 740;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.name-lede {
+  max-width: 620px;
+  margin: 20px auto 0;
+  color: var(--upkeep-muted);
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.name-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 430px) minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 68px);
+  align-items: center;
+}
+
+.krov-ticket {
+  --tred: #db2633;
+  --tblue: #123885;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--ticket-bg);
+  border: 1px solid var(--upkeep-card-line);
+  box-shadow: 0 14px 40px rgba(35, 39, 48, 0.10);
+  font-family: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, monospace;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+@media (hover: hover) {
+  .krov-ticket:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 52px rgba(35, 39, 48, 0.14);
+  }
+}
+
+.ticket-top { padding: 22px 22px 18px; }
+
+.ticket-headrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.ticket-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--upkeep-muted);
+}
+
+.ticket-brand svg { width: 16px; height: 16px; fill: currentColor; }
+.ticket-carrier { color: var(--upkeep-blue); }
+
+.ticket-route { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+.ticket-endpoint { text-align: center; }
+
+.ticket-endpoint b {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--upkeep-ink);
+  letter-spacing: -0.5px;
+}
+
+.ticket-endpoint span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--upkeep-muted);
+}
+
+.ticket-endpoint.tint b { color: var(--upkeep-blue); }
+
+.ticket-path { position: relative; flex: 1; height: 34px; }
+
+.ticket-path::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  border-top: 2px dotted color-mix(in srgb, var(--upkeep-muted) 55%, transparent);
+}
+
+.ticket-ferry {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ticket-bg);
+  color: var(--upkeep-blue);
+  box-shadow: 0 0 0 1px rgba(20, 135, 255, 0.22), inset 0 0 0 34px rgba(20, 135, 255, 0.10);
+}
+
+.ticket-ferry svg { width: 17px; height: 17px; fill: currentColor; }
+
+.ticket-fields { display: flex; }
+.ticket-fields > div { flex: 1; }
+.ticket-fields .ticket-field-center { text-align: center; }
+.ticket-fields .ticket-field-end { text-align: right; }
+
+.ticket-fields span {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--upkeep-muted);
+  margin-bottom: 3px;
+}
+
+.ticket-fields b { font-size: 14px; font-weight: 700; color: var(--upkeep-ink); }
+
+.ticket-stripe { display: flex; height: 4px; }
+.ticket-stripe i { flex: 1; }
+.ticket-stripe i:nth-child(1) { background: var(--tred); }
+.ticket-stripe i:nth-child(2) { background: #e7e7e7; }
+.ticket-stripe i:nth-child(3) { background: var(--tblue); }
+
+.ticket-perf { position: relative; height: 22px; }
+
+.ticket-dash {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  right: 18px;
+  border-top: 2px dashed color-mix(in srgb, var(--upkeep-ink) 22%, transparent);
+}
+
+.ticket-foot { padding: 16px 22px 22px; text-align: center; }
+
+.ticket-barcode {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 30px;
+  margin-bottom: 12px;
+}
+
+.ticket-barcode i { width: 2px; height: 30px; background: var(--upkeep-ink); opacity: 0.82; }
+.ticket-code { font-size: 11px; font-weight: 500; letter-spacing: 2px; color: var(--upkeep-muted); }
+
+.name-notes { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+.name-notes li { display: flex; gap: 14px; align-items: flex-start; }
+
+.name-note-dot {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.name-note-dot.blue { background: var(--upkeep-blue); }
+.name-note-dot.green { background: var(--upkeep-green); }
+.name-note-dot.red { background: #db2633; }
+
+.name-notes strong {
+  display: block;
+  color: var(--upkeep-ink);
+  font-size: 17px;
+  font-weight: 720;
+  margin-bottom: 2px;
+}
+
+.name-notes p { margin: 0; color: var(--upkeep-muted); font-size: 15px; line-height: 1.5; }
+.name-hvala { margin: 26px 0 0; font-size: 17px; font-weight: 720; color: var(--upkeep-ink); }
+
+@media screen and (max-width: 940px) {
+  .name-page { padding: 120px 0 64px; }
+
+  .name-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .krov-ticket { width: min(430px, 100%); }
+  .name-notes { text-align: left; }
+  .name-notes li { max-width: 460px; margin: 0 auto; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .krov-ticket { box-shadow: 0 16px 44px rgba(0, 0, 0, 0.44); }
+  .ticket-stripe i:nth-child(2) { background: #e9ecf3; }
+
+  @media (hover: hover) {
+    .krov-ticket:hover { box-shadow: 0 24px 56px rgba(0, 0, 0, 0.52); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .krov-ticket { transition: none !important; }
+  .krov-ticket:hover { transform: none !important; }
 }

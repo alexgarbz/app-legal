@@ -131,83 +131,6 @@ permalink: /
       </div>
     </section>
 
-    <section class="landing-section name-section" id="name">
-      <div class="landing-section-heading reveal">
-        <p class="landing-eyebrow">The name</p>
-        <h2>Krov means &ldquo;roof.&rdquo;</h2>
-      </div>
-
-      <div class="name-grid reveal">
-        <div class="krov-ticket" aria-label="Boarding pass from Dom to Krov">
-          <div class="ticket-top">
-            <div class="ticket-headrow">
-              <span class="ticket-brand">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h16l-1.4 4.2a2 2 0 0 1-1.9 1.3H7.3a2 2 0 0 1-1.9-1.3L4 13Zm2-1.5V7a1 1 0 0 1 1-1h3V4h4v2h3a1 1 0 0 1 1 1v4.5H6Z"/></svg>
-                BOARDING PASS
-              </span>
-              <span class="ticket-carrier">ADRIATIC LINE</span>
-            </div>
-
-            <div class="ticket-route">
-              <div class="ticket-endpoint"><b>DOM</b><span>HOME</span></div>
-              <div class="ticket-path">
-                <span class="ticket-ferry">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h16l-1.4 4.2a2 2 0 0 1-1.9 1.3H7.3a2 2 0 0 1-1.9-1.3L4 13Zm2-1.5V7a1 1 0 0 1 1-1h3V4h4v2h3a1 1 0 0 1 1 1v4.5H6Z"/></svg>
-                </span>
-              </div>
-              <div class="ticket-endpoint tint"><b>KROV</b><span>ROOF</span></div>
-            </div>
-
-            <div class="ticket-fields">
-              <div><span>MEANING</span><b>Roof</b></div>
-              <div><span>ORIGIN</span><b>Croatia</b></div>
-              <div><span>PASSENGER</span><b>You</b></div>
-            </div>
-          </div>
-
-          <div class="ticket-stripe"><i></i><i></i><i></i></div>
-
-          <div class="ticket-perf">
-            <span class="ticket-dash"></span>
-          </div>
-
-          <div class="ticket-foot">
-            <div class="ticket-barcode" aria-hidden="true">
-              <i style="width:2px"></i><i style="width:1px"></i><i style="width:3px"></i><i style="width:1px"></i><i style="width:2px"></i><i style="width:4px"></i><i style="width:1px"></i><i style="width:2px"></i><i style="width:1px"></i><i style="width:3px"></i><i style="width:1px"></i><i style="width:2px"></i><i style="width:4px"></i><i style="width:1px"></i><i style="width:2px"></i><i style="width:3px"></i><i style="width:1px"></i><i style="width:2px"></i><i style="width:1px"></i><i style="width:3px"></i><i style="width:2px"></i><i style="width:1px"></i>
-            </div>
-            <span class="ticket-code">KROV &middot; HR &middot; EST 2026</span>
-          </div>
-        </div>
-
-        <div class="name-story">
-          <ul class="name-notes">
-            <li>
-              <span class="name-note-dot blue"></span>
-              <div>
-                <strong>The part that protects</strong>
-                <p>A roof is what turns a house into a home. It quietly shelters everything beneath it, and only keeps doing that when it is looked after.</p>
-              </div>
-            </li>
-            <li>
-              <span class="name-note-dot green"></span>
-              <div>
-                <strong>Keeping it all up</strong>
-                <p>That is the idea behind Krov. It is your roof over everything, helping you keep the whole home in good shape, one small task at a time.</p>
-              </div>
-            </li>
-            <li>
-              <span class="name-note-dot red"></span>
-              <div>
-                <strong>A nod to home</strong>
-                <p>Krov is also a small tribute to my Croatian heritage, a reminder that the homes we care for are meant to last for generations.</p>
-              </div>
-            </li>
-          </ul>
-
-          <p class="name-hvala">Hvala for keeping up. 🇭🇷</p>
-        </div>
-      </div>
-    </section>
 
     <section class="landing-section final">
       <div class="final-glass reveal">
@@ -299,7 +222,6 @@ body {
   --cream: #f4f2ee; /* app appBackground */
   --orange: #ff8a25;
   --green: #34c759;
-  --ticket-bg: #ffffff;
   min-height: 100vh;
   color: var(--ink);
   background:
@@ -430,6 +352,7 @@ body {
   max-width: 760px;
   font-size: clamp(46px, 6.4vw, 82px);
   line-height: 1.0;
+  font-weight: 680;
 }
 
 .landing-lede,
@@ -904,178 +827,6 @@ body {
   filter: none;
 }
 
-/* ============================================================
-   The Name — a Croatian ferry boarding pass
-   ============================================================ */
-.name-section { scroll-margin-top: 100px; }
-
-.name-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 430px) minmax(0, 1fr);
-  gap: clamp(30px, 5vw, 68px);
-  align-items: center;
-}
-
-.krov-ticket {
-  --tred: #db2633;
-  --tblue: #123885;
-  position: relative;
-  overflow: hidden;
-  border-radius: 28px;
-  background: var(--ticket-bg);
-  border: 1px solid var(--card-line);
-  box-shadow: 0 14px 40px rgba(35, 39, 48, 0.10);
-  font-family: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, monospace;
-  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease;
-  will-change: transform;
-}
-
-@media (hover: hover) {
-  .krov-ticket:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 22px 52px rgba(35, 39, 48, 0.14);
-  }
-}
-
-.ticket-top { padding: 22px 22px 18px; }
-
-.ticket-headrow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 22px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-}
-
-.ticket-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--muted);
-}
-
-.ticket-brand svg { width: 16px; height: 16px; fill: currentColor; }
-.ticket-carrier { color: var(--blue); }
-
-.ticket-route { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
-.ticket-endpoint { text-align: center; }
-
-.ticket-endpoint b {
-  display: block;
-  font-size: 30px;
-  font-weight: 700;
-  color: var(--ink);
-  letter-spacing: -0.5px;
-}
-
-.ticket-endpoint span {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--muted);
-}
-
-.ticket-endpoint.tint b { color: var(--blue); }
-
-.ticket-path { position: relative; flex: 1; height: 34px; }
-
-.ticket-path::before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 0;
-  right: 0;
-  border-top: 2px dotted color-mix(in srgb, var(--muted) 55%, transparent);
-}
-
-.ticket-ferry {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--ticket-bg);
-  color: var(--blue);
-  box-shadow: 0 0 0 1px rgba(20, 135, 255, 0.22), inset 0 0 0 34px rgba(20, 135, 255, 0.10);
-}
-
-.ticket-ferry svg { width: 17px; height: 17px; fill: currentColor; }
-
-.ticket-fields { display: flex; }
-.ticket-fields > div { flex: 1; }
-
-.ticket-fields span {
-  display: block;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--muted);
-  margin-bottom: 3px;
-}
-
-.ticket-fields b { font-size: 14px; font-weight: 700; color: var(--ink); }
-
-.ticket-stripe { display: flex; height: 4px; }
-.ticket-stripe i { flex: 1; }
-.ticket-stripe i:nth-child(1) { background: var(--tred); }
-.ticket-stripe i:nth-child(2) { background: #e7e7e7; }
-.ticket-stripe i:nth-child(3) { background: var(--tblue); }
-
-.ticket-perf { position: relative; height: 22px; }
-
-.ticket-dash {
-  position: absolute;
-  top: 10px;
-  left: 18px;
-  right: 18px;
-  border-top: 2px dashed color-mix(in srgb, var(--ink) 22%, transparent);
-}
-
-.ticket-foot { padding: 16px 22px 22px; text-align: center; }
-
-.ticket-barcode {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 2.5px;
-  height: 30px;
-  margin-bottom: 12px;
-}
-
-.ticket-barcode i { width: 2px; height: 30px; background: var(--ink); opacity: 0.82; }
-.ticket-code { font-size: 11px; font-weight: 500; letter-spacing: 2px; color: var(--muted); }
-
-.name-notes { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
-.name-notes li { display: flex; gap: 14px; align-items: flex-start; }
-
-.name-note-dot {
-  flex: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-top: 6px;
-}
-
-.name-note-dot.blue { background: var(--blue); }
-.name-note-dot.green { background: var(--green); }
-.name-note-dot.red { background: #db2633; }
-
-.name-notes strong {
-  display: block;
-  color: var(--ink);
-  font-size: 17px;
-  font-weight: 720;
-  margin-bottom: 2px;
-}
-
-.name-notes p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
-.name-hvala { margin: 26px 0 0; font-size: 17px; font-weight: 720; color: var(--ink); }
 
 @media (max-width: 940px) {
   .landing-hero {
@@ -1086,19 +837,6 @@ body {
   .landing-hero-grid {
     grid-template-columns: 1fr;
   }
-
-  .name-grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-
-  .krov-ticket {
-    width: min(430px, 100%);
-  }
-
-  .name-notes { text-align: left; }
-  .name-notes li { max-width: 460px; margin: 0 auto; }
 
   .landing-copy {
     text-align: center;
@@ -1160,11 +898,16 @@ body {
 
   .landing-section {
     width: calc(100% - 28px);
-    padding: 52px 0;
+    padding: 40px 0;
+  }
+
+  .landing-section-heading {
+    margin-bottom: 18px;
   }
 
   .feature-board {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .feature-board .feature-tile,
@@ -1173,9 +916,29 @@ body {
     grid-column: auto;
   }
 
+  /* Compact cards on phones: icon beside the text, smaller type, tighter
+     padding — much less vertical scrolling. */
   .feature-tile {
-    border-radius: 26px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 15px 16px;
+    border-radius: 20px;
   }
+
+  .tile-icon {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 13px;
+  }
+
+  .tile-icon svg { width: 22px; height: 22px; }
+
+  .feature-tile p { font-size: 11px; margin-bottom: 3px; }
+  .feature-tile h3 { font-size: 17px; line-height: 1.2; }
+  .feature-tile span { font-size: 14px; margin-top: 5px; }
+  .feature-tile a { margin-top: 12px; }
 
   .final-glass {
     border-radius: 30px;
@@ -1207,7 +970,6 @@ body {
     --purple: #df6bf0;
     --orange: #ffa14f;
     --green: #4cd964;
-    --ticket-bg: #1b2030;
     color: var(--ink);
     background:
       radial-gradient(circle at 12% 11%, rgba(20, 135, 255, 0.16), transparent 28%),
@@ -1269,19 +1031,9 @@ body {
     color: rgba(244, 246, 251, 0.55);
   }
 
-  .krov-ticket {
-    box-shadow: 0 16px 44px rgba(0, 0, 0, 0.44);
-  }
-
-  .ticket-stripe i:nth-child(2) { background: #e9ecf3; }
-
   @media (hover: hover) {
     .feature-tile:hover {
       box-shadow: 0 20px 54px rgba(0, 0, 0, 0.50);
-    }
-
-    .krov-ticket:hover {
-      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.52);
     }
   }
 }
@@ -1300,8 +1052,7 @@ body {
 
   .app-store-button:hover,
   .glass-link:hover,
-  .feature-tile:hover,
-  .krov-ticket:hover {
+  .feature-tile:hover {
     transform: none;
   }
 
