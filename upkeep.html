@@ -2,7 +2,7 @@
 layout: default
 title: "Krov - Home care, made simple"
 description: "Krov keeps home task reminders, warranties, receipts, important records, and emergency essentials together under one roof, in one private iPhone app."
-image: /assets/krov-iphone-home-2026-07.png
+image: /assets/krov-iphone-home-light-2026-07.png
 permalink: /
 ---
 
@@ -39,7 +39,10 @@ permalink: /
 
         <div class="landing-device-wrap hero-in" style="--in-delay: 0.2s" aria-label="Krov app preview">
           <div class="device-float">
-            <img class="device-mockup" src="{{ '/assets/krov-iphone-home-2026-07.png' | relative_url }}" alt="Krov home screen preview on iPhone" decoding="async" fetchpriority="high">
+            <picture>
+              <source srcset="{{ '/assets/krov-iphone-home-dark-2026-07.png' | relative_url }}" media="(prefers-color-scheme: dark)">
+              <img class="device-mockup" src="{{ '/assets/krov-iphone-home-light-2026-07.png' | relative_url }}" alt="Krov home screen preview on iPhone" decoding="async" fetchpriority="high">
+            </picture>
           </div>
         </div>
       </div>
