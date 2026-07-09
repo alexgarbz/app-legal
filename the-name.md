@@ -8,7 +8,7 @@ permalink: /name/
   <div class="name-hero">
     <p class="name-eyebrow">The name</p>
     <h1>Krov means &ldquo;roof.&rdquo;</h1>
-    <p class="name-lede">Krov is the Croatian word for roof — the part of a home that quietly protects everything beneath it.</p>
+    <p class="name-lede">Krov is the Croatian word for roof, the part of a home that quietly protects everything beneath it.</p>
   </div>
 
   <div class="name-grid">

@@ -55,13 +55,29 @@ You can choose **Smart Digest**, **Daily Digest** or **Off**. Smart Digest group
 
 Open **Settings -> Notifications -> Krov** on your iPhone and make sure notifications are enabled. You can choose your reminder style inside Krov settings.
 
-### How does iCloud sync work?
+### How does syncing work?
 
-Krov uses your Apple iCloud account to sync homes, tasks, products, records, emergency details and profiles between your devices. Make sure you are signed in to iCloud, iCloud Drive is enabled and Krov has iCloud access.
+Krov keeps everything in sync through your Apple iCloud account, automatically. Changes sync in the background within seconds across all of your devices and everyone in a shared home, and open homes stay up to date while you use the app. You can also pull down on the Tasks list to refresh at any time. Make sure you are signed in to iCloud, iCloud Drive is on, and Krov has iCloud access.
 
-### How do shared homes work?
+### How do I share a home?
 
-The home owner can invite people to a shared home through Manage Home. People you invite need a simple Krov profile so tasks can show who they belong to. Shared homes use Apple iCloud sharing and the owner controls home details and sharing permissions.
+Open **Manage Home**, tap **Invite to Current Home**, and send the invite link however you like, such as Messages or Mail. Only the home owner can invite people, and a home can have up to five people including you.
+
+### How do I join a home someone shared with me?
+
+Open the invite link they sent and it will open in Krov and ask you to confirm. Joining replaces the home currently on your device with the shared one, so set up a quick profile first. Your name and colour let everyone see who each task belongs to.
+
+### Who can do what in a shared home?
+
+Everyone in a shared home sees the same tasks, products and records, and every change syncs to the whole home. The owner manages home details and who has access, and can label people as Owner, Resident or Guest from Manage Home.
+
+### How do I remove someone, or leave a home?
+
+The owner can remove a person in **Manage Home**: tap their role, then choose **Remove from Home**. To leave a home yourself, open **Settings -> Reset Home** and confirm; the home stays for everyone else and you start fresh on your device. An owner cannot reset a shared home while other people are still on it, so remove everyone first.
+
+### What happens if the home owner stops using Krov?
+
+If the owner only deletes the app, nothing changes for anyone else, and the home is still there if they reinstall. If the owner deletes the shared home or removes its iCloud data, it is removed for everyone, because a shared home lives in the owner's iCloud.
 
 ### What is Pantry?
 
@@ -84,6 +100,10 @@ Check **Settings -> Notifications -> Krov**, confirm the task has a due date or 
 ### A task did not repeat
 
 Check the task's repeat schedule. If the task was completed, edited or moved, its next due date may depend on those settings.
+
+### A change is not showing on my other device
+
+Krov syncs automatically within seconds, but iOS can occasionally delay background updates. Open the app or pull down on the Tasks list to refresh. Check that both devices have a connection and are signed in to the correct Apple ID.
 
 ### My data is missing
 

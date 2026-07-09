@@ -858,7 +858,7 @@ main.page-content > .wrapper,
   }
 }
 
-/* Dark theme — mirrors the landing page so every page matches. */
+/* Dark theme, mirrors the landing page so every page matches. */
 @media (prefers-color-scheme: dark) {
   :root {
     --upkeep-ink: #f4f6fb;
@@ -968,7 +968,7 @@ main.page-content > .wrapper,
 }
 
 /* ============================================================
-   Shared motion — nav condense, card hover, page entrance.
+   Shared motion, nav condense, card hover, page entrance.
    All disabled under prefers-reduced-motion at the end.
    ============================================================ */
 
@@ -1061,7 +1061,7 @@ main.page-content > .wrapper,
   }
 }
 
-/* Dark-mode scrolled nav — declared last so it always wins over the light
+/* Dark-mode scrolled nav, declared last so it always wins over the light
    scrolled rule when both match, keeping the header dark on scroll. */
 @media (prefers-color-scheme: dark) {
   .global-floating-header.scrolled .global-floating-nav {
@@ -1071,7 +1071,7 @@ main.page-content > .wrapper,
 }
 
 /* ============================================================
-   The Name page — a Croatian ferry boarding pass
+   The Name page, a Croatian ferry boarding pass
    ============================================================ */
 .name-page {
   width: min(1180px, calc(100% - 36px));
